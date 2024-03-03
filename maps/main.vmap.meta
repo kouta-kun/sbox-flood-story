@@ -1,0 +1,33 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "main",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "main",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "MenuResources": "*",
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.ticket_machine#33683",
+        "facepunch.concrete_simple#18632",
+        "facepunch.wall_brick_c#45181",
+        "facepunch.floor_tile_marble#18685",
+        "facepunch.pavement_tactile_trim_a#18745",
+        "facepunch.wired_glass_a#19956",
+        "facepunch.glass_a#19946"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/main.vmap"
+      }
+    }
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "Id": "cc35e4f5-c609-4fed-a594-f803fed011b2",
+  "GameObjects": [
+    {
+      "Id": "67bf1af2-9f36-4f6a-a777-28daa9c9907f",
+      "Name": "Map",
+      "Position": "-188.8461,607.1663,111.0145",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "MapInstance",
+          "MapName": "main",
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "Id": "530b4b5f-14f0-408e-a63a-cd252bc1f7bf",
+      "Name": "Camera",
+      "Position": "-547.0999,-414.1493,438.7394",
+      "Rotation": "-0.1448568,0.2860231,0.427961,0.8450187",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "CameraMovementComponent",
+          "AngleRotate": 0,
+          "Follow": {
+            "_type": "gameobject",
+            "go": "62ed1464-3757-4a21-b86c-d1f3e2b310ab"
+          }
+        }
+      ]
+    },
+    {
+      "Id": "62ed1464-3757-4a21-b86c-d1f3e2b310ab",
+      "Name": "Player",
+      "Position": "-262.2937,-47.73478,68.9607",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "AnimationGraph": "models/citizen/citizen.vanmgrph",
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "CharacterController",
+          "Acceleration": 10,
+          "Bounciness": 0.3,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "PlayerComponent",
+          "AngleDelta": 17.732014,
+          "Direction": "0.9524916,0.1733437,-0.2504234",
+          "Distance": 275.3764,
+          "Velocity": "0,0,0"
+        },
+        {
+          "__type": "InventoryComponent",
+          "Items": []
+        }
+      ]
+    },
+    {
+      "Id": "f22158df-a796-4a9c-acf9-473f3e820eb9",
+      "Name": "Sphere",
+      "Position": "-158.4284,-44.90823,44.50843",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/sphere.vmdl",
+          "RenderType": "On",
+          "Tint": "0,0.66667,1,0.58"
+        },
+        {
+          "__type": "PointerComponent",
+          "DegreeRotation": 45
+        }
+      ]
+    },
+    {
+      "Id": "3b774ee9-a2ab-4ef7-962e-a85a2f8f8807",
+      "Name": "Screen",
+      "Position": "-507.5497,-546.7928,307.5061",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "InteractionPanel"
+        },
+        {
+          "__type": "InventoryPanel",
+          "inventory": null
+        }
+      ]
+    },
+    {
+      "Id": "b74bff2b-b81b-4013-934f-ec5681ec511a",
+      "Name": "Object",
+      "Position": "-241.3219,347.6472,71.548",
+      "Rotation": "0,-0,-0.7071068,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "AnimationGraph": "models/citizen/citizen.vanmgrph",
+          "BodyGroups": 337,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": "default",
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "NPCClothesComponent",
+          "ClothesIds": [
+            626961084,
+            -791583293,
+            217563227
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "Id": "cb9bd53d-80c8-45b5-88aa-fbd36b31ee7d",
+          "Name": "Clothing - nerdy_glasses",
+          "Position": "0,0,0",
+          "Tags": "clothing",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "AnimationGraph": null,
+              "BodyGroups": 18446744073709551615,
+              "BoneMergeTarget": {
+                "_type": "component",
+                "go": "b74bff2b-b81b-4013-934f-ec5681ec511a",
+                "component_type": "SkinnedModelRenderer"
+              },
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen_clothes/glasses/nerdy_glasses/models/nerdy_glasses.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "Id": "05a56e8d-76b1-461a-bf32-3ffc8724193a",
+          "Name": "Clothing - dotted_dress",
+          "Position": "0,0,0",
+          "Tags": "clothing",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "AnimationGraph": null,
+              "BodyGroups": 18446744073709551615,
+              "BoneMergeTarget": {
+                "_type": "component",
+                "go": "b74bff2b-b81b-4013-934f-ec5681ec511a",
+                "component_type": "SkinnedModelRenderer"
+              },
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen_clothes/dress/dotted_dress/models/dotted_dress.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        },
+        {
+          "Id": "7217b496-c9a0-48b4-9722-943568bfd4eb",
+          "Name": "Clothing - hair_longcurly_brown",
+          "Position": "0,0,0",
+          "Tags": "clothing",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "AnimationGraph": null,
+              "BodyGroups": 18446744073709551615,
+              "BoneMergeTarget": {
+                "_type": "component",
+                "go": "b74bff2b-b81b-4013-934f-ec5681ec511a",
+                "component_type": "SkinnedModelRenderer"
+              },
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen_clothes/hair/hair_longcurly/models/hair_longcurly_brown.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 60,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "minimal",
+  "Description": "",
+  "LastSaved": "2024-03-02T21:07:24.4033647-03:00",
+  "__references": []
+}

@@ -1,0 +1,18 @@
+.panel {
+  background-color: #aa00aa50;
+  border-radius: 25px;
+  border: 1px solid blue;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  min-height: 10vh;
+  width: 40vw;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.panel > label {
+  width: 100%;
+  color: white;
+}

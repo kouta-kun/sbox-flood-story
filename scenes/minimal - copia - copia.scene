@@ -1,0 +1,301 @@
+{
+  "Id": "cc35e4f5-c609-4fed-a594-f803fed011b2",
+  "GameObjects": [
+    {
+      "Id": "67bf1af2-9f36-4f6a-a777-28daa9c9907f",
+      "Name": "Map",
+      "Position": "-188.8461,607.1663,111.0145",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "MapInstance",
+          "MapName": "main",
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "Id": "530b4b5f-14f0-408e-a63a-cd252bc1f7bf",
+      "Name": "Camera",
+      "Position": "-547.0999,-414.1493,438.7394",
+      "Rotation": "-0.1448568,0.2860231,0.427961,0.8450187",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "BackgroundColor": "0.39459,0.50635,0.55814,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "CameraMovementComponent",
+          "AngleRotate": 0,
+          "Follow": {
+            "_type": "gameobject",
+            "go": "62ed1464-3757-4a21-b86c-d1f3e2b310ab"
+          }
+        },
+        {
+          "__type": "Highlight"
+        }
+      ]
+    },
+    {
+      "Id": "62ed1464-3757-4a21-b86c-d1f3e2b310ab",
+      "Name": "Player",
+      "Position": "-262.2937,-47.73478,68.9607",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "AnimationGraph": "models/citizen/citizen.vanmgrph",
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "CharacterController",
+          "Acceleration": 10,
+          "Bounciness": 0.3,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "PlayerComponent",
+          "AngleDelta": 17.732014,
+          "Direction": "0.9524916,0.1733437,-0.2504234",
+          "Distance": 275.3764,
+          "Velocity": "0,0,0"
+        },
+        {
+          "__type": "InventoryComponent",
+          "Items": []
+        }
+      ]
+    },
+    {
+      "Id": "f22158df-a796-4a9c-acf9-473f3e820eb9",
+      "Name": "Sphere",
+      "Position": "-158.4284,-44.90823,44.50843",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/sphere.vmdl",
+          "RenderType": "Off",
+          "Tint": "0,0.66667,1,0.58"
+        },
+        {
+          "__type": "PointerComponent",
+          "DegreeRotation": 45
+        }
+      ]
+    },
+    {
+      "Id": "3b774ee9-a2ab-4ef7-962e-a85a2f8f8807",
+      "Name": "Screen",
+      "Position": "-507.5497,-546.7928,307.5061",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "InteractionPanel"
+        },
+        {
+          "__type": "InventoryPanel",
+          "inventory": {
+            "_type": "component",
+            "go": "62ed1464-3757-4a21-b86c-d1f3e2b310ab",
+            "component_type": "InventoryComponent"
+          }
+        }
+      ]
+    },
+    {
+      "Id": "6dc37143-5895-42d2-91ad-1d220220f21f",
+      "Name": "Shopkeeper",
+      "Position": "-235.8643,299.3275,77.59991",
+      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "AnimationGraph": null,
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": "default",
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "NpcClothesComponent",
+          "ClothesJSON": "[{\u0022id\u0022:-1432366212},{\u0022id\u0022:-1322907673},{\u0022id\u0022:-1027298053},{\u0022id\u0022:-1395513003},{\u0022id\u0022:-934412006}]"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "CafeteriaShopKeeper"
+        }
+      ]
+    },
+    {
+      "Id": "faccb73f-e584-497f-bc58-4e2207bdd278",
+      "Name": "Ticketmaster",
+      "Position": "182.1727,299.3275,77.59991",
+      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "AnimationGraph": null,
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": "default",
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "NpcClothesComponent",
+          "ClothesJSON": "[{\u0022id\u0022:1875643260},{\u0022id\u0022:-778804355},{\u0022id\u0022:720795379},{\u0022id\u0022:660516083},{\u0022id\u0022:626961084},{\u0022id\u0022:-620074038}]"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "BusTicketMaster"
+        }
+      ]
+    },
+    {
+      "Id": "07a379a6-fc8e-403d-be2c-a4256d057486",
+      "Name": "ChatScreen",
+      "Position": "-254.2979,460.9214,62.1209",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "ChatPanel"
+        },
+        {
+          "__type": "ChatSystem"
+        }
+      ]
+    },
+    {
+      "Id": "ac22b502-f363-4719-8b8e-77117365a0d3",
+      "Name": "Bus",
+      "Position": "-313.4932,-530.23,93.37206",
+      "Rotation": "0,0,-0.1305262,0.991445",
+      "Enabled": true,
+      "__Prefab": "prefabs/bus.prefab"
+    },
+    {
+      "Id": "986b6d7a-2e7e-4232-aac5-501026dfacba",
+      "Name": "Bus (3)",
+      "Position": "24.42506,-524.7061,93.37234",
+      "Rotation": "0,0,-0.1305262,0.991445",
+      "Enabled": true,
+      "__Prefab": "prefabs/bus.prefab"
+    },
+    {
+      "Id": "c75e32e3-a416-4157-959f-b82032e0d3bc",
+      "Name": "Bus (1)",
+      "Position": "-581.0848,-525.2195,93.37186",
+      "Rotation": "0,0,-0.1305262,0.991445",
+      "Enabled": true,
+      "__Prefab": "prefabs/bus.prefab"
+    },
+    {
+      "Id": "a37c38c6-348b-497e-a226-3f90896f06de",
+      "Name": "Bus (2)",
+      "Position": "-855.1579,-505.8349,93.37184",
+      "Rotation": "0,0,-0.1305262,0.991445",
+      "Enabled": true,
+      "__Prefab": "prefabs/bus.prefab"
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 60,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "minimal",
+  "Description": "",
+  "LastSaved": "2024-03-03T14:17:15.4681088-03:00",
+  "__references": []
+}
