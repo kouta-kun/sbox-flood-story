@@ -1,8 +1,7 @@
 {
   "RootObject": {
     "Id": "ac22b502-f363-4719-8b8e-77117365a0d3",
-    "Name": "Bus",
-    "Position": "-313.4932,-530.23,93.37206",
+    "Name": "bus",
     "Enabled": true,
     "Components": [
       {
@@ -10,14 +9,14 @@
         "BodyGroups": 18446744073709551615,
         "MaterialGroup": null,
         "MaterialOverride": null,
-        "Model": "models/bus.vmdl",
+        "Model": "models/bussin.vmdl",
         "RenderType": "On",
         "Tint": "1,1,1,1"
       },
       {
         "__type": "ModelCollider",
         "IsTrigger": false,
-        "Model": "models/bus.vmdl",
+        "Model": "models/bussin.vmdl",
         "Static": false,
         "Surface": null
       }
@@ -26,7 +25,7 @@
       {
         "Id": "ef50faac-9684-426b-a44c-5156d8b6fd35",
         "Name": "Spot Light",
-        "Position": "0.0001220703,153.5989,0",
+        "Position": "0.0001770619,372.3215,0",
         "Rotation": "0,0,0.7071067,0.7071068",
         "Tags": "light_spot,light",
         "Enabled": true,
@@ -48,7 +47,7 @@
       {
         "Id": "e8e33dfd-57af-4521-8dbe-08eb3c8974a3",
         "Name": "Spot Light",
-        "Position": "-90.47519,153.599,0",
+        "Position": "-90.47512,372.3216,0",
         "Rotation": "0,0,0.7071067,0.7071068",
         "Tags": "light_spot,light",
         "Enabled": true,

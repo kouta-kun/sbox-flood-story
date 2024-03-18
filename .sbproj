@@ -1,13 +1,13 @@
 {
-  "Title": "burgersh0t",
+  "Title": "Flood Story",
   "Type": "game",
-  "Org": "local",
-  "Ident": "burgersh0t",
+  "Org": "koutarou",
+  "Ident": "flood_story",
   "Tags": null,
   "Schema": 1,
   "HasAssets": true,
   "AssetsPath": "",
-  "Resources": null,
+  "Resources": "",
   "MenuResources": "*",
   "HasCode": true,
   "CodePath": "/code/",
@@ -26,7 +26,7 @@
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "CsProjName": "",
-    "StartupScene": "scenes/minimal.scene",
+    "StartupScene": "scenes/mainscene.scene",
     "ProjectTemplate": null,
     "ControlModes": {},
     "InputSettings": {
@@ -139,7 +139,20 @@
         }
       ]
     },
-    "MapStartupScene": null,
-    "LaunchMode": "Normal"
+    "MapStartupScene": "scenes/mainscene.scene",
+    "LaunchMode": "Normal",
+    "Compiler": {
+      "RootNamespace": "Sandbox",
+      "DefineConstants": "SANDBOX;ADDON;DEBUG",
+      "NoWarn": "1701;1702;1591;",
+      "WarningsAsErrors": "",
+      "Whitelist": true,
+      "AssemblyReferences": [],
+      "IgnoreFolders": [
+        "editor",
+        "unittest"
+      ],
+      "DistinctAssemblyReferences": []
+    }
   }
 }

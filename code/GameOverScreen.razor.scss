@@ -1,0 +1,64 @@
+GameOverScreen
+{
+	position: absolute;
+	top: 2vh;
+	left: 2vw;
+	right: 2vw;
+	bottom: 2vh;
+	background-color: #4448;
+	backdrop-filter: blur(50px);
+	font-weight: bold;
+	border-radius: 20px;
+	pointer-events: all;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	transition: all 5s ease-out;
+	
+	&:intro {
+		backdrop-filter: blur(0px);
+		background-color: #4440;
+	}
+}
+
+.title
+{
+	font-size: 30px;
+	font-weight: bolder;
+	font-family: Poppins;
+	color: #fff;
+}
+
+.space {
+	height: 5vh;
+}
+.subtitle
+{
+	font-size: 25px;
+	font-family: Poppins;
+	color: #fff;
+}
+
+.credits {
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	transition: height 10s ease-out;
+	overflow: hidden;
+	height: 30vh;
+	display: flex;
+	
+	&:intro {
+		height: 0vh;
+	}
+}
+.subcredits {
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 30vh;
+	max-height: 30vh;
+	overflow: hidden;
+	align-self: flex-end;
+	flex: 1;
+}

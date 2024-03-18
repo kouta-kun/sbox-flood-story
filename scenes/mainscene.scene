@@ -1,0 +1,933 @@
+{
+  "Id": "0afd2e24-4781-46b7-bf80-39f8c4c41374",
+  "GameObjects": [
+    {
+      "Id": "67bf1af2-9f36-4f6a-a777-28daa9c9907f",
+      "Name": "Map",
+      "Position": "-188.8461,607.1663,111.0145",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "MapInstance",
+          "MapName": "main",
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "Id": "530b4b5f-14f0-408e-a63a-cd252bc1f7bf",
+      "Name": "Camera",
+      "Position": "-776.7375,-190.9292,352.6347",
+      "Rotation": "-0.1448568,0.2860231,0.427961,0.8450187",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "BackgroundColor": "0.39459,0.50635,0.55814,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        },
+        {
+          "__type": "CameraMovementComponent",
+          "AngleRotate": 0,
+          "Follow": {
+            "_type": "gameobject",
+            "go": "62ed1464-3757-4a21-b86c-d1f3e2b310ab"
+          }
+        },
+        {
+          "__type": "Highlight"
+        }
+      ]
+    },
+    {
+      "Id": "62ed1464-3757-4a21-b86c-d1f3e2b310ab",
+      "Name": "Player",
+      "Position": "-558.5721,84.6982,68.9607",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "AnimationGraph": "models/citizen/citizen.vanmgrph",
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "CharacterController",
+          "Acceleration": 10,
+          "Bounciness": 0.3,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "PlayerComponent",
+          "AngleDelta": 11.063844,
+          "Direction": "0.981414,-0.1488152,-0.1211643",
+          "Distance": 569.1503,
+          "Velocity": "0,0,0"
+        },
+        {
+          "__type": "InventoryComponent",
+          "Items": []
+        }
+      ]
+    },
+    {
+      "Id": "f22158df-a796-4a9c-acf9-473f3e820eb9",
+      "Name": "Sphere",
+      "Position": "-454.7068,87.52475,44.50843",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/sphere.vmdl",
+          "RenderType": "Off",
+          "Tint": "0,0.66667,1,0.58"
+        },
+        {
+          "__type": "PointerComponent",
+          "DegreeRotation": 45
+        }
+      ]
+    },
+    {
+      "Id": "3b774ee9-a2ab-4ef7-962e-a85a2f8f8807",
+      "Name": "Screen",
+      "Position": "-507.5497,-546.7928,307.5061",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "InteractionPanel"
+        },
+        {
+          "__type": "InventoryPanel",
+          "inventory": {
+            "_type": "component",
+            "go": "62ed1464-3757-4a21-b86c-d1f3e2b310ab",
+            "component_type": "InventoryComponent"
+          }
+        }
+      ]
+    },
+    {
+      "Id": "6dc37143-5895-42d2-91ad-1d220220f21f",
+      "Name": "Shopkeeper",
+      "Position": "-235.8643,299.3275,77.59991",
+      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "AnimationGraph": null,
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": "default",
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "NpcClothesComponent",
+          "ClothesJSON": "[{\u0022id\u0022:-1432366212},{\u0022id\u0022:-1322907673},{\u0022id\u0022:-1027298053},{\u0022id\u0022:-1395513003},{\u0022id\u0022:-934412006}]"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "CafeteriaShopKeeper"
+        }
+      ]
+    },
+    {
+      "Id": "827f4c79-ab45-41d5-be1c-6fe7376bca5a",
+      "Name": "Young Woman",
+      "Position": "-274.2492,-149.0101,63.78128",
+      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "AnimationGraph": null,
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": "default",
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "NpcClothesComponent",
+          "ClothesJSON": "[{\u0022id\u0022:-664776708},{\u0022id\u0022:-1761975310},{\u0022id\u0022:1715855322},{\u0022id\u0022:1594058106},{\u0022id\u0022:469696431},{\u0022id\u0022:533403674},{\u0022id\u0022:-1688334362}]"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "GenericNPCComponent"
+        }
+      ]
+    },
+    {
+      "Id": "abd334e8-81c5-4705-a0f4-90e50e17846c",
+      "Name": "Young Kid",
+      "Position": "-414.5452,230.4987,63.78128",
+      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "AnimationGraph": null,
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": "default",
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "NpcClothesComponent",
+          "ClothesJSON": "[{\u0022id\u0022:-778804355},{\u0022id\u0022:1753539681},{\u0022id\u0022:-2046547486},{\u0022id\u0022:626961084},{\u0022id\u0022:-325454412},{\u0022id\u0022:-100519886}]"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "YoungKidNPCComponent"
+        }
+      ]
+    },
+    {
+      "Id": "a5062bab-1ebd-4cdd-89ad-52ac688b0273",
+      "Name": "Salaryman",
+      "Position": "-513.425,-149.0101,63.78128",
+      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "AnimationGraph": null,
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": "default",
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "NpcClothesComponent",
+          "ClothesJSON": "[{\u0022id\u0022:999198456},{\u0022id\u0022:1194605997},{\u0022id\u0022:-923065548},{\u0022id\u0022:1343816453},{\u0022id\u0022:-1659713462},{\u0022id\u0022:-934412006}]"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "GenericNPCComponent"
+        }
+      ]
+    },
+    {
+      "Id": "1fb39607-2402-4e9b-a342-db55a68b2144",
+      "Name": "Army Soldier",
+      "Position": "373.4931,-278.3087,63.78126",
+      "Rotation": "-0,0,1,-0.00000004371139",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "AnimationGraph": null,
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": "default",
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "NpcClothesComponent",
+          "ClothesJSON": "[{\u0022id\u0022:-69855493},{\u0022id\u0022:181315396},{\u0022id\u0022:1034075642},{\u0022id\u0022:-1330488900},{\u0022id\u0022:-236248938},{\u0022id\u0022:-1191994301},{\u0022id\u0022:-519197702},{\u0022id\u0022:-1492226718}]"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "GenericNPCComponent"
+        }
+      ]
+    },
+    {
+      "Id": "2931bc8e-6459-4750-8bc7-92dda5181b4f",
+      "Name": "Homeless Moises",
+      "Position": "-869.6998,-1850.091,80.04669",
+      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "AnimationGraph": null,
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": "default",
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "NpcClothesComponent",
+          "ClothesJSON": "[{\u0022id\u0022:999198456},{\u0022id\u0022:829898412},{\u0022id\u0022:1911360045},{\u0022id\u0022:1661366749},{\u0022id\u0022:791197114},{\u0022id\u0022:-1611545262}]"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "HomelessMoises"
+        }
+      ]
+    },
+    {
+      "Id": "faccb73f-e584-497f-bc58-4e2207bdd278",
+      "Name": "Ticketmaster",
+      "Position": "182.1727,299.3275,77.59991",
+      "Rotation": "0,0,-0.7071067,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "AnimationGraph": null,
+          "BodyGroups": 341,
+          "BoneMergeTarget": null,
+          "CreateBoneObjects": false,
+          "MaterialGroup": "default",
+          "MaterialOverride": null,
+          "Model": "models/citizen/citizen.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "NpcClothesComponent",
+          "ClothesJSON": "[{\u0022id\u0022:1875643260},{\u0022id\u0022:-778804355},{\u0022id\u0022:720795379},{\u0022id\u0022:660516083},{\u0022id\u0022:626961084},{\u0022id\u0022:-620074038}]"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/citizen/citizen.vmdl",
+          "Static": false,
+          "Surface": null
+        },
+        {
+          "__type": "BusTicketMaster"
+        }
+      ]
+    },
+    {
+      "Id": "07a379a6-fc8e-403d-be2c-a4256d057486",
+      "Name": "ChatScreen",
+      "Position": "-254.2979,460.9214,62.1209",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 116
+        },
+        {
+          "__type": "ChatPanel"
+        },
+        {
+          "__type": "ChatSystem"
+        }
+      ]
+    },
+    {
+      "Id": "ac22b502-f363-4719-8b8e-77117365a0d3",
+      "Name": "Bus",
+      "Position": "-313.4932,-713.7891,93.37206",
+      "Rotation": "0,0,-0.1305262,0.991445",
+      "Enabled": true,
+      "__Prefab": "prefabs/bus.prefab"
+    },
+    {
+      "Id": "986b6d7a-2e7e-4232-aac5-501026dfacba",
+      "Name": "Bus (3)",
+      "Position": "24.42506,-708.2652,93.37234",
+      "Rotation": "0,0,-0.1305262,0.991445",
+      "Enabled": true,
+      "__Prefab": "prefabs/bus.prefab"
+    },
+    {
+      "Id": "c75e32e3-a416-4157-959f-b82032e0d3bc",
+      "Name": "Bus (1)",
+      "Position": "-581.0848,-708.7786,93.37186",
+      "Rotation": "0,0,-0.1305262,0.991445",
+      "Enabled": true,
+      "__Prefab": "prefabs/bus.prefab"
+    },
+    {
+      "Id": "a37c38c6-348b-497e-a226-3f90896f06de",
+      "Name": "Bus (2)",
+      "Position": "-855.1579,-689.394,93.37184",
+      "Rotation": "0,0,-0.1305262,0.991445",
+      "Enabled": true,
+      "__Prefab": "prefabs/bus.prefab"
+    },
+    {
+      "Id": "676a7684-a9bd-43ae-b228-04fc50b089bb",
+      "Name": "GM",
+      "Position": "-2246.141,-147.1274,335.4015",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "GameManagerComponent"
+        }
+      ]
+    },
+    {
+      "Id": "617560b1-821e-4039-a23c-d4a734b59343",
+      "Name": "GameOverScreen",
+      "Position": "-912.2755,-2.265152,64.39794",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 2
+        },
+        {
+          "__type": "GameOverScreen",
+          "__enabled": false
+        }
+      ]
+    },
+    {
+      "Id": "f6040a64-bb25-4698-9302-0ef7fe11ed7a",
+      "Name": "Spot Light",
+      "Position": "-1235.653,-342.4346,208.4661",
+      "Rotation": "0,0.7071067,0,0.7071068",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SpotLight",
+          "Attenuation": 1.64,
+          "ConeInner": 44.28,
+          "ConeOuter": 45,
+          "Cookie": null,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 313.3,
+          "Shadows": true
+        }
+      ]
+    },
+    {
+      "Id": "813eb598-7896-4b39-85bb-6285c51aa01d",
+      "Name": "Spot Light (1)",
+      "Position": "-1596.202,-651.9307,227.7988",
+      "Rotation": "-0.4304593,0.5609855,-0.4304593,0.5609857",
+      "Tags": "light_spot,light",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "SpotLight",
+          "Attenuation": 0,
+          "ConeInner": 90,
+          "ConeOuter": 22.66,
+          "Cookie": null,
+          "FogMode": "Disabled",
+          "FogStrength": 1,
+          "LightColor": "0.91373,0.98039,1,1",
+          "Radius": 1664.798,
+          "Shadows": true
+        }
+      ]
+    },
+    {
+      "Id": "ca7ed001-36df-4648-a377-8598930fd6bb",
+      "Name": "Text",
+      "Position": "-585.1609,247.788,150.7146",
+      "Rotation": "0,0,0.5,0.8660254",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "TextRenderer",
+          "Color": "1,1,1,1",
+          "FontFamily": "Poppins",
+          "FontSize": 64,
+          "Scale": 0.3,
+          "Text": "Move your mouse and press\nLeft Click to move."
+        }
+      ]
+    },
+    {
+      "Id": "6c4a4f4d-19f8-4c44-a14e-b35421c1358d",
+      "Name": "Text (1)",
+      "Position": "-585.1609,247.788,100.1473",
+      "Rotation": "0,0,0.6087614,0.7933534",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "TextRenderer",
+          "Color": "1,1,1,1",
+          "FontFamily": "Poppins",
+          "FontSize": 64,
+          "Scale": 0.3,
+          "Text": "Hold Right Click to rotate\nyour camera."
+        }
+      ]
+    },
+    {
+      "Id": "d0738b42-ecb8-4913-8ce8-62ef74dda586",
+      "Name": "Text",
+      "Position": "-243.4016,254.1814,97.50852",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "TextRenderer",
+          "Color": "1,1,1,1",
+          "FontFamily": "Poppins",
+          "FontSize": 92.95,
+          "Scale": 0.17,
+          "Text": "Press E to interact and\nTab to see your inventory"
+        }
+      ]
+    },
+    {
+      "Id": "d4c8ef13-7011-4b89-9480-7ff9af2d09f5",
+      "Name": "Text",
+      "Position": "154.8017,254.6604,86.42068",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "TextRenderer",
+          "Color": "1,1,1,1",
+          "FontFamily": "Poppins",
+          "FontSize": 64,
+          "Scale": 0.3,
+          "Text": "Try getting a bus ticket..."
+        }
+      ]
+    },
+    {
+      "Id": "ecb8cd66-69fb-41ad-9b1d-26a34fdd1cc5",
+      "Name": "Text",
+      "Position": "280.5239,60.777,65.20736",
+      "Rotation": "0.09229593,0.7010574,-0.09229594,0.7010575",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "TextRenderer",
+          "Color": "1,0.99217,0.53023,1",
+          "FontFamily": "Poppins",
+          "FontSize": 128,
+          "Scale": 0.7,
+          "Text": "\u2192"
+        }
+      ]
+    },
+    {
+      "Id": "0b65ab6c-5b31-4e36-b920-6cb422db530d",
+      "Name": "Text (2)",
+      "Position": "177.3698,-249.8414,65.20734",
+      "Rotation": "0.4304593,0.5609856,-0.4304594,0.5609856",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "TextRenderer",
+          "Color": "1,0.5,0,1",
+          "FontFamily": "Poppins",
+          "FontSize": 128,
+          "Scale": 0.7,
+          "Text": "\u2192"
+        }
+      ]
+    },
+    {
+      "Id": "965e75e7-1b56-4306-9b3c-b0ec444bdbe9",
+      "Name": "Text (3)",
+      "Position": "-62.83948,-249.8414,65.20734",
+      "Rotation": "0.5,0.5000001,-0.5000001,0.5000001",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "TextRenderer",
+          "Color": "1,0.5,0,1",
+          "FontFamily": "Poppins",
+          "FontSize": 128,
+          "Scale": 0.7,
+          "Text": "\u2192"
+        }
+      ]
+    },
+    {
+      "Id": "7a78c861-3b9e-43e2-94e9-e183c8502826",
+      "Name": "Text (4)",
+      "Position": "-259.273,-249.8414,65.20734",
+      "Rotation": "0.5,0.5000001,-0.5000001,0.5000001",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "TextRenderer",
+          "Color": "1,0.5,0,1",
+          "FontFamily": "Poppins",
+          "FontSize": 128,
+          "Scale": 0.7,
+          "Text": "\u2192"
+        }
+      ]
+    },
+    {
+      "Id": "42fd71b3-9eaa-4ca1-a4ee-5275fd2503e3",
+      "Name": "Text (5)",
+      "Position": "-505.9325,-249.8414,65.20734",
+      "Rotation": "0.5,0.5000001,-0.5000001,0.5000001",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "TextRenderer",
+          "Color": "1,0.5,0,1",
+          "FontFamily": "Poppins",
+          "FontSize": 128,
+          "Scale": 0.7,
+          "Text": "\u2192"
+        }
+      ]
+    },
+    {
+      "Id": "6c595eda-8137-4255-bdcf-71edd3d2c000",
+      "Name": "Text (6)",
+      "Position": "-858.3628,-249.8414,65.20734",
+      "Rotation": "0.3535534,0.6123725,-0.3535535,0.6123726",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "TextRenderer",
+          "Color": "1,0.5,0,1",
+          "FontFamily": "Poppins",
+          "FontSize": 128,
+          "Scale": 0.7,
+          "Text": "\u2192"
+        }
+      ]
+    },
+    {
+      "Id": "7d8481f3-418a-414e-9b97-f2836958df5a",
+      "Name": "Text",
+      "Position": "-1279.372,-229.0298,121.37",
+      "Rotation": "0,0,1,0.0000001947072",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "TextRenderer",
+          "Color": "1,1,1,1",
+          "FontFamily": "Poppins",
+          "FontSize": 64,
+          "Scale": 0.3,
+          "Text": "Press CTRL to\ncrouch, and shift\nto run"
+        }
+      ]
+    },
+    {
+      "Id": "38d47c27-4fc4-489e-ad73-461c29544027",
+      "Name": "atm machine",
+      "Position": "294.2161,-102.2192,108.7342",
+      "Rotation": "0.5,-0.4999999,-0.5,0.5000001",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/atm machine.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ATMMachineComponent"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/atm machine.vmdl",
+          "Static": true,
+          "Surface": null
+        }
+      ]
+    },
+    {
+      "Id": "08138ae5-0839-4706-96d9-0a60498a1e9c",
+      "Name": "bike",
+      "Position": "-850.5284,476.4067,78.19582",
+      "Rotation": "0,0,-0.258819,0.9659258",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Prop",
+          "Health": 150,
+          "IsStatic": true,
+          "Model": "models/props/bike/bike.vmdl",
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "ShowCreatedComponents": false
+        },
+        {
+          "__type": "BikeComponent"
+        }
+      ]
+    },
+    {
+      "Id": "9e88c87a-fbe3-4209-af4b-88710055d8a2",
+      "Name": "bike (1)",
+      "Position": "357.7535,209.1621,78.19581",
+      "Rotation": "0,0,0.7933533,0.6087614",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Prop",
+          "Health": 150,
+          "IsStatic": true,
+          "Model": "models/props/bike/bike.vmdl",
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "ShowCreatedComponents": false
+        },
+        {
+          "__type": "BikeComponent"
+        }
+      ]
+    },
+    {
+      "Id": "e6434aca-726e-4ea1-9f6c-ca0833b3652c",
+      "Name": "metal_wheely_bin",
+      "Position": "-577.4366,486.6948,65.00535",
+      "Rotation": "0,0,1,0.0000001947072",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Prop",
+          "Health": 20,
+          "IsStatic": true,
+          "Model": "models/sbox_props/metal_wheely_bin/metal_wheely_bin.vmdl",
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "ShowCreatedComponents": false
+        }
+      ]
+    },
+    {
+      "Id": "5535441f-e04a-4195-9b8f-3907c7eb1dcc",
+      "Name": "office_screen_02",
+      "Position": "383.64,172.4015,102.7458",
+      "Rotation": "-0.00000005960464,0,0.9999999,0",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Prop",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/trim_sheets/partitions/office_screen_02.vmdl",
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "ShowCreatedComponents": false
+        },
+        {
+          "__type": "NoticeBoardComponent"
+        }
+      ]
+    },
+    {
+      "Id": "e60f2c99-d5db-45d8-bb82-c29f9e9e726e",
+      "Name": "telephone_box",
+      "Position": "-652.2793,-123.5101,64.08671",
+      "Rotation": "0,0,0.7071067,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Prop",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/telephone_box/telephone_box.vmdl",
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "ShowCreatedComponents": false
+        },
+        {
+          "__type": "PhoneComponent"
+        }
+      ]
+    },
+    {
+      "Id": "76a73939-333b-453a-a86b-8d2896c07ad6",
+      "Name": "pizza",
+      "Position": "128.3993,-127.1602,107.2385",
+      "Rotation": "-0.05306882,0.009893663,0.9816286,0.1830056",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Prop",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/props/pizza/pizza.vmdl",
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "ShowCreatedComponents": false
+        },
+        {
+          "__type": "PizzaComponent"
+        }
+      ]
+    },
+    {
+      "Id": "b5dd7660-81b2-4619-80cb-c2d58d775642",
+      "Name": "tree_oak_big_a",
+      "Position": "-750.0786,-1982.778,163.9684",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Prop",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/sbox_props/trees/oak/tree_oak_big_a.vmdl",
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "ShowCreatedComponents": false
+        }
+      ]
+    },
+    {
+      "Id": "2aa33441-3a20-48b6-98d7-6efd4047012a",
+      "Name": "vending machine",
+      "Position": "-36.21995,284.2469,66.51695",
+      "Rotation": "0,0,0.7071068,-0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "Prop",
+          "Health": 0,
+          "IsStatic": true,
+          "Model": "models/vending machine.vmdl",
+          "OnPropBreak": null,
+          "OnPropTakeDamage": null,
+          "ShowCreatedComponents": false
+        },
+        {
+          "__type": "VendingMachineComponent"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 60,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 60,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "minimal",
+  "Description": "",
+  "LastSaved": "2024-03-09T20:37:29.2440625-03:00",
+  "__references": [
+    "facepunch.metal_wheely_bin",
+    "facepunch.mountainbike",
+    "facepunch.office_screen_02",
+    "facepunch.pizza",
+    "facepunch.telephone_box",
+    "facepunch.tree_oak_big_a"
+  ]
+}

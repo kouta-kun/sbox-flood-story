@@ -1,0 +1,42 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<div class="title">Thanks for playing!</div>
+	<div class="subtitle">This game is really just a tech demo to try out my Scene System skills.</div>
+	<div class="space"></div>
+	<div class="title">However, it is based on a true story.</div>
+	<div class="subtitle">In 2022, a flood ocurred in my city and I was trapped in a bus terminal since even the sidewalk was dangerous.</div>
+	<div class="subtitle">After walking around for a while, I bought a coffee for a homeless man, after which the storm stopped. Probably just a coincidence.</div>
+	<div class="space"></div>
+	<div class="title"> But I consider that man to be homeless moises.</div>
+	
+	<div class="title">Score: @Score</div>
+	@foreach ( var motive in Motives )
+	{
+		<div class="subtitle">@motive</div>
+	}
+
+	<div class="credits">
+		<div class="subcredits">
+			<div class="title">Credits</div>
+			<div class="subtitle">Map, game coding, ads, story - kouta-kun</div>
+			<div class="title">Attribution</div>
+			<div class="subtitle">Citizen model, props and textures - Facepunch</div>
+			<div class="subtitle">Bus model - <a href="https://opengameart.org/content/3d-bus"> ajanhallinta (OpenGameArt) CC0</a></div>
+		</div>
+	</div>
+</root>
+
+@code
+{
+
+	/// <summary>
+	/// the hash determines if the system should be rebuilt. If it changes, it will be rebuilt
+	/// </summary>
+	protected override int BuildHash() => System.HashCode.Combine( this.GameObject.Name );
+
+	public int Score { get; set; } = 0;
+	public List<string> Motives { get; set; } = new();
+}

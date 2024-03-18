@@ -6,4 +6,9 @@ public class ChatSystem : Component
 	{
 		GameObject.Components.Get<ChatPanel>().ShowMessage(from.Name + ": " + message);
 	}
+
+	public void RawSay( string rawMessage )
+	{
+		GameObject.Components.Get<ChatPanel>().ShowMessage( rawMessage );
+	}
 }

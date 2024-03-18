@@ -6,7 +6,7 @@ public class BusTicketMaster : Interactable
 	{
 		if ( enable )
 		{
-			GetScreenComponent<ChatSystem>().Say(GameObject, "Welcome!");
+			GetScreenComponent<ChatSystem>().Say( GameObject, "Welcome!" );
 		}
 	}
 
@@ -19,7 +19,20 @@ public class BusTicketMaster : Interactable
 				Label = "Buy Bus Ticket",
 				Action = () =>
 				{
-					GetScreenComponent<ChatSystem>().Say(GameObject, "Sorry man, buses aren't going out due to the floods.");
+					var gameManagerComponent = this.AccessGameManager();
+					if ( gameManagerComponent
+					    .GaveOutCoffee )
+					{
+						GetScreenComponent<ChatSystem>().Say( GameObject,
+							"The flood stopped! The bus is leaving in a couple of minutes." );
+						Task.DelayRealtimeSeconds( 5 ).ContinueWith( ( _ ) =>
+							gameManagerComponent.Finish() );
+					}
+					else
+					{
+						GetScreenComponent<ChatSystem>().Say( GameObject,
+							"Sorry man, buses aren't going out due to the floods." );
+					}
 				}
 			}
 		};

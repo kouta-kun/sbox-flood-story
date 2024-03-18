@@ -40,7 +40,7 @@ public class PointerComponent : Component
 			Transform.Position += new Vector3(
 				rotatedDelta.x, -rotatedDelta.y, 0f
 			);
-			_playerDistanceVector = (Transform.Position - _player.Transform.Position)/*.ClampLength( 250 )*/;
+			_playerDistanceVector = (Transform.Position - _player.Transform.Position).ClampLength( 750 );
 
 
 			Transform.Position = _player.Transform.Position + _playerDistanceVector;

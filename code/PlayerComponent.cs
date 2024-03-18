@@ -25,6 +25,7 @@ public sealed class PlayerComponent : Component
 
 		_inventory.Items.Clear();
 		_inventory.Items.AddRange( Enumerable.Repeat( new InventoryItem( "Coin" ), 50 ) );
+		_inventory.Items.Add(new InventoryItem("Debit Card"));
 
 		Target = Transform.Position;
 	}
@@ -118,6 +119,11 @@ public sealed class PlayerComponent : Component
 		{
 			_inventoryPanel.Toggle();
 		}
+
+		// if ( Input.Pressed( "reload" ) )
+		// {
+		// 	Scene.Children.Find( go => go.Name == "GM" ).Components.Get<GameManagerComponent>().Finish();
+		// }
 	}
 
 	private int FindInteractables()
@@ -160,9 +166,14 @@ public sealed class PlayerComponent : Component
 	{
 		if ( Target.Distance( Transform.Position ) > 2f )
 		{
+			var speed = 80;
+
+			if ( Input.Down( "run" ) )
+				speed = 200;
+			
 			var direction = (Target - Transform.Position).Normal;
 
-			var targetPosition = Transform.Position + direction * 80 * Time.Delta;
+			var targetPosition = Transform.Position + direction * speed * Time.Delta;
 
 			var initialPosition = Transform.Position;
 			_characterController.MoveTo( targetPosition, true );
@@ -189,8 +200,8 @@ public sealed class PlayerComponent : Component
 			direction = direction.RotateAround( Vector3.Zero,
 				Rotation.FromAxis( Vector3.Up, 180 + Transform.Rotation.Angles().yaw ) );
 
-			_skinnedModelRenderer.Set( "move_x", direction.x * 100 );
-			_skinnedModelRenderer.Set( "move_y", direction.y * 100 );
+			_skinnedModelRenderer.Set( "move_x", direction.x * speed );
+			_skinnedModelRenderer.Set( "move_y", direction.y * speed );
 			_skinnedModelRenderer.Set( "move_z", 0 );
 		}
 		else

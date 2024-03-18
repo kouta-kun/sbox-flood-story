@@ -37,7 +37,21 @@
         "facepunch.floor_rough_asphalt#18674",
         "facepunch.floor_gravel_sand_a#18656",
         "facepunch.chef_knife#45159",
-        "facepunch.floor_old_asphalt#18665"
+        "facepunch.floor_old_asphalt#18665",
+        "facepunch.telephone_box#43069",
+        "facepunch.wall_panel_grey_b#18695",
+        "facepunch.atm#33652",
+        "koutarou.adboard_3#49452",
+        "koutarou.adboard_2#49451",
+        "koutarou.adboard_1#49450",
+        "facepunch.tree_oak_medium_a#33692",
+        "facepunch.rock_scatter_02#47199",
+        "facepunch.rock_scatter_01#47198",
+        "facepunch.beech_hedge_96x128#29094",
+        "facepunch.beech_bush_small#29089",
+        "facepunch.rock_scatter_03#47200",
+        "facepunch.rock_scatter_pile_02#47202",
+        "facepunch.summer_flowers_03#47034"
       ],
       "Metadata": {
         "SingleAssetSource": "maps/main.vmap"
